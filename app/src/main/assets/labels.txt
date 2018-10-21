@@ -1,2 +1,2 @@
-hot
-not
+Face
+Not Face

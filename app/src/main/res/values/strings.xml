@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">HotOrNot</string>
+    <string name="app_name">Face Recognition</string>
 
-    <string name="hot">hot</string>
-    <string name="not">not</string>
+    <string name="hot">Face</string>
+    <string name="not">Not Face</string>
 
     <string name="take_photo">Take photo</string>
 </resources>

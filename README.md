@@ -1,22 +1,8 @@
-# TensorFlow - Hot or Not?
-This is an example of how to use [TensorFlow](https://www.tensorflow.org/) library on Android to classify images. 
-You can find the code explanation in details on [my blog post](https://proandroiddev.com/using-tensorflow-in-android-step-by-step-code-explanation-fee36c281f32). If you're interested how the model was created, you can read about it on [my other blog post](https://medium.com/@mateuszbudzar/re-training-the-model-with-images-using-tensorflow-7758e9eb8db5).
-
-<div align="center">
-<a href="https://imgflip.com/i/257ush"><img width="270" height="480" src="https://i.imgflip.com/257ush.jpg" title="made at imgflip.com"/></a>
-<a href="https://imgflip.com/i/257uv9"><img width="270" height="480" src="https://i.imgflip.com/257uv9.jpg" title="made at imgflip.com"/></a>
-</div>
-
-<br/>
-
-## Presentation
-The example was created for the presentation purpose which you can find [here](https://github.com/makorowy/tensorflow-hotornot/blob/master/TensorFlow%20-%20HON%20(ENG).pdf).
-
 ## Usage
 
 Flow of the app is pretty simple:
 1. Take a photo.
-2. Classify if it's hot or not.
+2. Classify if it's a face or not.
 3. Show the results.
 
 ### Code structure
@@ -31,7 +17,7 @@ The app consists of two main components:
 - `inputName` - the name of the classifier's input (the photo pixels goes in there),
 - `outputName` - the name of the classifier's output (the results can be found there),
 - `imageSize` - the size of the photo,
-- `labels` - the list of the labels (in our case "hot" and "not"),
+- `labels` - the list of the labels (in our case "face" and "not face"),
 - `imageBitmapPixels` - the array with bitmap pixels (int values before normalization),
 - `imageNormalizedPixels` - the array with normalized pixels,
 - `results` - the list with the results,
@@ -57,6 +43,3 @@ For the classification process the instance of the `TensorFlowInferenceInterface
 <br/> `tensorFlowInference.fetch(outputName, results)` <br/>
 
 The results are then passed to the `MainActivity` and shown on the screen.
-
-## License
-[Apache 2.0](https://github.com/makorowy/tensorflow-hotornot/blob/master/LICENCE)
